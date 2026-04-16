@@ -18,6 +18,7 @@ spec:
       containers:
         - name: cytobank-rails
           image: 108170245965.dkr.ecr.us-west-2.amazonaws.com/cytobank-rails:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 3000
