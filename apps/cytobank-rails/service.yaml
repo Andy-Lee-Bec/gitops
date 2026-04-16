@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cytobank-rails
+  namespace: cytobank-app
+  labels:
+    app.kubernetes.io/name: cytobank-rails
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: cytobank-rails
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
