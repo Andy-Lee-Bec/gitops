@@ -19,6 +19,7 @@ spec:
         - name: cytobank-rails
           image: 108170245965.dkr.ecr.us-west-2.amazonaws.com/cytobank-rails:latest
           imagePullPolicy: IfNotPresent
+          command: ["/root/src/cytobank/code_build/bash/start_rails_server.sh"]
           ports:
             - name: http
               containerPort: 3000
